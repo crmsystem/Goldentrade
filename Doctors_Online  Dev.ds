@@ -1,0 +1,2991 @@
+/*
+ * Author       : zoho_job35
+ * Generated on : 10-Apr-2020 19:21:12
+ * Version      : 1.0
+ */
+ application "Doctors Online"
+ {
+ 	date format = "dd-MMM-yyyy"
+ 	time zone = "Asia/Manila"
+ 	time format = "24-hr"
+ 	signin using = "Google"
+	section Dashboards
+	{
+		icon = "ui-1-dashboard-half"
+				 page DASHBOARDS1 
+	 	 { 
+ 	 	 displayname = "DASHBOARDS" 
+
+ 	 	 icon = "ui-1-dashboard-half" 
+	 	 Content="<zml \n\t\t\tisPdfEnabled='false'\n\t\t\n\t\t\tisPrintEnabled='false'\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t>\n\t<layout>\n\t<row>\n\t<column\n   \t\t width=\"34%\"\n   \t>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<panel \n>\n\t<pr    \t\t height = 'fill'\n   \t\t width = 'fill'\n\n>\n\t<pc    \t\t width = '100%'\n   \t\t bgColor = '#3F3F3F'\n   \t\t padding = '20px'\n   \t\t hAlign = 'center'\n   \t\t vAlign = 'middle'\n\n>\n\t<pr    \t\t height = 'auto'\n   \t\t width = 'auto'\n\n>\n\t<pc    \t\t bgColor = '#595959'\n   \t\t padding = '5px'\n   \t\t hAlign = 'center'\n\n>\n\t<pr \n>\n\t<pc \n>\n\t<image    \t\t color = '#FF614E'\n   \t\t bgColor = '#FFFFFF'\n   \t\t width = '52px'\n   \t\t height = '52px'\n   \t\t type = 'icon'\n   \t\t value = 'users-2-man-up'\n   \t\t size = '4'\n   \t\t iconType = 'outline'\n\n\/>\n<\/pc>\n<\/pr><pr \n>\n\t<pc \n>\n\t<text    \t\t type = 'Form Data'\n   \t\t value = 'thisapp.Patient_Attendance.ID.count'\n   \t\t criteria = '(((Date_field1 is today)))'\n   \t\t size = '8'\n   \t\t color = '#FF614E'\n   \t\t bold = 'true'\n   \t\t marginTop = '3px'\n   \t\t displayType = 'actual'\n   \t\t decimalSeperator = '.'\n   \t\t numberScale = 'none'\n   \t\t action = 'OpenReport'\n   \t\t target = 'popup'\n   \t\t componentLinkName = 'All_Appointments'\n\n>\n<\/text>\n\n\n<\/pc>\n<\/pr><pr \n>\n\t<pc \n>\n\t<text    \t\t type = 'Text'\n   \t\t value = 'PATIENTS COUNTS TODAY'\n   \t\t size = '3'\n   \t\t color = '#FFFFFF'\n   \t\t marginTop = '3px'\n\n>\n<\/text>\n\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/panel>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<panel \n>\n\t<pr    \t\t height = 'fill'\n   \t\t width = 'fill'\n\n>\n\t<pc    \t\t width = '100%'\n   \t\t bgColor = '#FFFFFF'\n   \t\t padding = '20px'\n   \t\t vAlign = 'middle'\n\n>\n\t<pr    \t\t height = 'auto'\n   \t\t width = 'auto'\n\n>\n\t<pc    \t\t vAlign = 'middle'\n\n>\n\t<button    \t\t text = 'ONSITE VISIT'\n   \t\t size = '3'\n   \t\t color = '#FFFFFF'\n   \t\t bgColor = '#000000'\n   \t\t type = 'rounded'\n   \t\t action = 'OpenForm'\n   \t\t target = 'popup'\n   \t\t componentLinkName = 'Patient_Attendance'\n   \t\t cornerRadius = '50px'\n\n\/>\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/panel>\n<\/column>\n<\/row>\n<\/column><column\n   \t\t width=\"33%\"\n   \t>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<panel \n>\n\t<pr    \t\t height = 'fill'\n   \t\t width = 'fill'\n\n>\n\t<pc    \t\t width = '100%'\n   \t\t bgColor = '#3F3F3F'\n   \t\t padding = '20px'\n   \t\t hAlign = 'center'\n   \t\t vAlign = 'middle'\n\n>\n\t<pr    \t\t height = 'auto'\n   \t\t width = 'auto'\n\n>\n\t<pc    \t\t bgColor = '#595959'\n   \t\t padding = '5px'\n\n>\n\t<pr \n>\n\t<pc \n>\n\t<image    \t\t color = '#FF4C2F'\n   \t\t bgColor = '#FFFFFF'\n   \t\t width = '52px'\n   \t\t height = '52px'\n   \t\t type = 'icon'\n   \t\t value = 'design-mouse-10'\n   \t\t size = '4'\n   \t\t cornerRadius = '26px'\n   \t\t action = 'OpenReport'\n   \t\t parameters = 'EMERGENCY'\n   \t\t target = 'popup'\n   \t\t iconType = 'outline'\n   \t\t componentLinkName = 'Details_of_Reported_Cases'\n\n\/>\n<\/pc>\n<\/pr><pr \n>\n\t<pc \n>\n\t<text    \t\t type = 'Form Data'\n   \t\t value = 'thisapp.Add_Report.Temperature.max'\n   \t\t criteria = '((((Date_Tested is today)&amp;&amp;(Temperature &gt;= 40))))'\n   \t\t size = '8'\n   \t\t color = '#FF4C2F'\n   \t\t bold = 'true'\n   \t\t bgColor = '#595959'\n   \t\t marginTop = '0px'\n   \t\t displayType = 'actual'\n   \t\t decimalPlaces = '2'\n   \t\t decimalSeperator = '.'\n   \t\t numberScale = 'none'\n\n>\n<\/text>\n\n\n<\/pc>\n<\/pr><pr \n>\n\t<pc \n>\n\t<text    \t\t type = 'Text'\n   \t\t value = 'PATIENT HIGHEST TEMPERATURE TODAY'\n   \t\t size = '3'\n   \t\t color = '#FFFFFF'\n   \t\t marginTop = '3px'\n\n>\n<\/text>\n\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/panel>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<panel \n>\n\t<pr    \t\t height = 'fill'\n   \t\t width = 'fill'\n\n>\n\t<pc    \t\t width = '100%'\n   \t\t bgColor = '#FFFFFF'\n   \t\t padding = '20px'\n   \t\t vAlign = 'middle'\n\n>\n\t<pr    \t\t height = 'auto'\n   \t\t width = 'auto'\n\n>\n\t<pc    \t\t vAlign = 'middle'\n\n>\n\t<button    \t\t text = 'QUEUING SYSTEM'\n   \t\t size = '3'\n   \t\t color = '#FFFFFF'\n   \t\t bgColor = '#000000'\n   \t\t type = 'rounded'\n   \t\t action = 'OpenReport'\n   \t\t target = 'new-window'\n   \t\t componentLinkName = 'All_Clinic_Attendances_History'\n   \t\t cornerRadius = '60px'\n\n\/>\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/panel>\n<\/column>\n<\/row>\n<\/column><column\n   \t\t width=\"33%\"\n   \t>\n\t<row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<panel \n>\n\t<pr    \t\t height = 'fill'\n   \t\t width = 'fill'\n\n>\n\t<pc    \t\t width = '100%'\n   \t\t bgColor = '#3F3F3F'\n   \t\t padding = '20px'\n   \t\t hAlign = 'center'\n   \t\t vAlign = 'middle'\n\n>\n\t<pr    \t\t height = 'auto'\n   \t\t width = 'auto'\n\n>\n\t<pc    \t\t bgColor = '#595959'\n   \t\t padding = '5px'\n\n>\n\t<pr \n>\n\t<pc \n>\n\t<image    \t\t color = '#6288EA'\n   \t\t bgColor = '#FFFFFF'\n   \t\t width = '52px'\n   \t\t height = '52px'\n   \t\t type = 'icon'\n   \t\t value = 'tech-2-headphone'\n   \t\t size = '4'\n   \t\t cornerRadius = '26px'\n   \t\t action = 'OpenURL'\n   \t\t url = 'https:\/\/meetinglab.zoho.com\/meeting\/2430281000000006071#\/schedule'\n   \t\t target = 'same-window'\n   \t\t iconType = 'solid'\n\n\/>\n<\/pc>\n<\/pr><pr \n>\n\t<pc \n>\n\t<text    \t\t type = 'Form Data'\n   \t\t value = 'thisapp.Patient_Attendance.Date_field1.distinctCount'\n   \t\t criteria = '(((Date_field1 is today)))'\n   \t\t size = '8'\n   \t\t color = '#FF4C2F'\n   \t\t bold = 'true'\n   \t\t marginTop = '3px'\n   \t\t displayType = 'actual'\n   \t\t decimalSeperator = '.'\n   \t\t numberScale = 'none'\n   \t\t action = 'OpenReport'\n   \t\t target = 'new-window'\n   \t\t componentLinkName = 'Patient_List'\n\n>\n<\/text>\n\n\n<\/pc>\n<\/pr><pr \n>\n\t<pc \n>\n\t<text    \t\t type = 'Text'\n   \t\t value = 'SET ONLINE APPOINTMENT'\n   \t\t size = '3'\n   \t\t color = '#FFFFFF'\n   \t\t marginTop = '3px'\n\n>\n<\/text>\n\n\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/panel>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<panel \n>\n\t<pr    \t\t height = 'fill'\n   \t\t width = 'fill'\n\n>\n\t<pc    \t\t width = '100%'\n   \t\t bgColor = '#FFFFFF'\n   \t\t padding = '20px'\n   \t\t vAlign = 'middle'\n\n>\n\t<pr    \t\t height = 'auto'\n   \t\t width = 'auto'\n\n>\n\t<pc    \t\t vAlign = 'middle'\n\n>\n\t<button    \t\t text = 'CALENDAR'\n   \t\t size = '3'\n   \t\t color = '#FFFFFF'\n   \t\t bgColor = '#000000'\n   \t\t type = 'rounded'\n   \t\t action = 'OpenURL'\n   \t\t url = 'https:\/\/calendar.zoho.com\/mycalendar#'\n   \t\t target = 'popup'\n   \t\t popupWidth = '3px'\n   \t\t popupHeight = '3px'\n   \t\t cornerRadius = '41px'\n\n\/>\n<\/pc>\n<\/pr>\n<\/pc>\n<\/pr>\n<\/panel>\n<\/column>\n<\/row>\n<\/column>\n<\/row><row>\n\t<column\n   \t\t width=\"100%\"\n   \t>\n\t<report    \t\t appLinkName = 'thisapp'\n   \t\t linkName = 'Patient_List'\n   \t\t heightType = 'auto'\n   \t\t heightValue = '700'\n   \t\t iszreport = 'false'\n   \t\t zc_Header = 'true'\n   \t\t zc_Footer = 'true'\n   \t\t zc_SecHeader = 'true'\n   \t\t zc_AddRec = 'false'\n   \t\t zc_EditRec = 'false'\n   \t\t zc_Print = 'false'\n   \t\t zc_Export = 'false'\n   \t\t zc_DelRec = 'false'\n   \t\t zc_DuplRec = 'false'\n   \t\t zc_EditBulkRec = 'true'\n   \t\t zc_SaveRec = 'true'\n   \t\t zc_Filter = 'true'\n   \t\t zc_Search = 'true'\n   \t\t zc_SumRow = 'true'\n   \t\t zc_ColMenu = 'true'\n   \t\t zc_RecSelect = 'true'\n\n\/>\n<\/column>\n<\/row>\n<\/layout>\n<\/zml>" 
+ 	 	}
+	}
+	section Patient_Name
+	{
+		displayname= "Patient Name"
+		icon = "tech-desktop"
+		form Add_Patient
+		{
+			displayname = "Add Patient"
+			success message = "Data Added Successfully!"
+			field alignment = left
+			feature property = 40
+			Section
+			(
+				type = section
+	 			row = 1
+	 			column = 0   
+				width = medium
+			)
+			Patient_Control_No
+			(
+    			type = autonumber
+				displayname = "Patient Control No"
+				start index = 1
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Name
+			(
+    			type = name
+     			prefix
+     			(
+	     			 type = prefix
+	     			 displayname ="Prefix"
+	     			 visibility = false
+	     			 value = {"Mr.","Mrs.","Ms."}
+     			) 
+     			first_name
+     			(
+	     			 type = first_name
+	     			 displayname ="First Name"
+     			) 
+     			last_name
+     			(
+	     			 type = last_name
+	     			 displayname ="Last Name"
+     			) 
+     			suffix
+     			(
+	     			 type = suffix
+	     			 displayname ="Suffix"
+	     			 visibility = false
+     			) 
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Gender
+			(
+				type = radiobuttons
+				values = {"Male", "Female"}
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Date_of_Birth
+			(
+    			type = date
+				displayname = "Date of Birth"
+				alloweddays = 0,1,2,3,4,5,6
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Telepono
+			(
+    			type = phonenumber
+				displayname = "Phone"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Valid_ID
+			(
+    			type = image
+				displayname = "Valid ID"
+				source  = file,camera
+				camera = primary
+				preview duration = 0
+				show gallery = true
+				switch camera = true
+				submit onscan = true
+    			description
+    			[
+    				type = tooltip
+    			 	message = "Attach One Government ID (SSS,Driver License, PRC,Passport,Voters ID, Senior Citizen, Pagibi)"
+    			]
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Address
+			(
+    			type = address
+     			capture_coordinates = true
+     			adjust_using_map = true
+     			address_line_1
+     			(
+	     			  type = address_line_1
+	     			  displayname = "Address Line 1"
+     			) 
+     			address_line_2
+     			(
+	     			  type = address_line_2
+	     			  displayname = "Address Line 2"
+     			) 
+     			district_city
+     			(
+	     			  type = district_city
+	     			  displayname = "City / District"
+     			) 
+     			state_province
+     			(
+	     			  type = state_province
+	     			  displayname = "State / Province"
+     			) 
+     			postal_Code
+     			(
+	     			  type = postal_Code
+	     			  displayname = "Postal Code"
+     			) 
+     			country
+     			(
+	     			  type = country
+	     			  displayname = "Country"
+     			) 
+     			latitude
+     			(
+	     			  type = latitude
+	     			  displayname = "latitude"
+	     			 visibility = false
+     			) 
+     			longitude
+     			(
+	     			  type = longitude
+	     			  displayname = "longitude"
+	     			 visibility = false
+     			) 
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Email
+			(
+    			type = email
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+	
+			customize
+			(
+				icon = "ui-1-bold-add"
+			)
+			actions
+			{
+				on add
+				{
+					submit
+					(
+   						type = submit
+   						displayname = "Submit"
+					)
+					reset
+					(
+   						type = reset
+   						displayname = "Reset"
+					)
+				}
+				on edit
+				{
+					update
+					(
+   						type = submit
+   						displayname = "Update"
+					)
+					cancel
+					(
+   						type = cancel
+   						displayname = "Cancel"
+					)
+				}
+			}
+        		geofencing 
+        		{
+        		 latitude = "14.55"
+        		 longitude = "121.033"
+        		 radius = "10"
+        		 unit = "M"
+        		}
+		}
+		list Patient_List
+		{
+			displayName = "Patient List"
+			show all rows from Add_Patient  [Name.first_name is not null]  
+			(
+				Name 
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Address 
+	 			(
+	      			displayformat = [address_line_1+""+address_line_2+""+district_city+""+state_province+""+postal_Code+""+country]
+	      			enable = Link_to_Map,Show_As_Text
+	 			)
+				Patient_Control_No as "Patient Control No"
+				Gender
+				Telepono as "Phone"
+				Email
+				Valid_ID as "Valid ID"
+			)
+			options
+			(
+				icon = "business-laptop-71"
+	 		)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Patient_Control_No as "Patient Control No"
+							Name
+							Valid_ID as "Valid ID"
+							Address
+							Gender
+							Telepono as "Phone"
+							Email
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Name
+							Patient_Control_No as "Patient Control No"
+							Address
+							Gender
+							Telepono as "Phone"
+							Email
+							Valid_ID as "Valid ID"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+	}
+	section Patient_Vital_Signs
+	{
+		displayname= "Patient Vital Signs"
+		icon = "sport-boxing"
+		form Add_Report
+		{
+			displayname = "Add Report"
+			success message = "Data Added Successfully!"
+			field alignment = left
+			feature property = 40
+			Section
+			(
+				type = section
+	 			row = 1
+	 			column = 0   
+				width = medium
+			)
+			Patient_Name
+			(
+				type = picklist
+				displayname = "Patient Name"
+				values  = Add_Patient[Address.district_city is not null].ID
+    			displayformat = [" " + Name.first_name + "-" + Name.last_name + "-" + Patient_Control_No]
+				allow new entries = true
+				[
+					displayname = "Add New"
+				]
+				sortorder = ascending
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Patient_Control_No
+			(
+				type = number
+				displayname = "Patient Control No"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Phone_Number
+			(
+    			type = phonenumber
+				displayname = "Phone"
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Email
+			(
+    			type = email
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Temperature
+			(
+				type = decimal
+				maxchar = 4
+    			description
+    			[
+    				type = help_text
+    			 	message = "Ex : 37.5 or 39.00 or 40.00"
+    			]
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have Date_Tested
+			(
+    			type = datetime
+				displayname = "Date Tested"
+				initial value = "${zoho.currentdate}"
+				timedisplayoptions = "hh:mm:ss"
+				alloweddays = 0,1,2,3,4,5,6
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			BP
+			(
+    			type = text
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Weight
+			(
+    			type = text
+    			description
+    			[
+    				type = help_text
+    			 	message = "In lbs"
+    			]
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Height
+			(
+    			type = text
+    			description
+    			[
+    				type = help_text
+    			 	message = "in ft"
+    			]
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Describe_Present_Health_Condition
+			(
+     			type = audio
+				displayname = "Describe Present Health Condition"
+    			duration=300
+    			description
+    			[
+    				type = help_text
+    			 	message = "Can record up to 5 minutes long"
+    			]
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Attach_current_photo
+			(
+    			type = image
+				displayname = "Attach current photo"
+				source  = file,camera
+				camera = primary
+				preview duration = 0
+				show gallery = true
+				switch camera = true
+				submit onscan = true
+    			description
+    			[
+    				type = help_text
+    			 	message = "Recommeded in mobile to attache documents and image"
+    			]
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Auto_Number
+			(
+    			type = autonumber
+				displayname = "Auto Number"
+				start index = 0
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Medical_Staff
+			(
+				type = section
+				displayname = "Medical Staff"
+				visibility = true
+	 			row = 2
+	 			column = 0   
+				width = medium
+			)
+			Attending_Physician
+			(
+				type = picklist
+				displayname = "Attending Physician"
+				values  = Medical_Staff.ID
+    			displayformat = [Full_Name + " >>" + Specialization]
+				allow new entries = true
+				[
+					displayname = "Add New"
+				]
+				sortorder = ascending
+	 			row = 2
+	 			column = 1   
+				width = medium
+			)
+			must have Signature
+			(
+    			type = signature
+    			description
+    			[
+    				type = tooltip
+    			 	message = "Pumirma sa screen gamit ang daliri"
+    			]
+	 			row = 2
+	 			column = 1   
+				width = medium
+			)
+	
+			customize
+			(
+				icon = "sport-boxing"
+			)
+			actions
+			{
+				on add
+				{
+					submit
+					(
+   						type = submit
+   						displayname = "Submit"
+					)
+					reset
+					(
+   						type = reset
+   						displayname = "Reset"
+					)
+				}
+				on edit
+				{
+					update
+					(
+   						type = submit
+   						displayname = "Update"
+					)
+					cancel
+					(
+   						type = cancel
+   						displayname = "Cancel"
+					)
+				}
+			}
+        		geofencing 
+        		{
+        		 latitude = "14.55"
+        		 longitude = "121.033"
+        		 radius = "10"
+        		 unit = "M"
+        		}
+		}
+		list Details_of_Reported_Cases
+		{
+			displayName = "Details of Reported Cases"
+			show all rows from Add_Report  [Temperature is not null && Date_Tested is today]  
+			(
+				Patient_Name as "Patient Name"
+				(
+					view = Patient_List
+				)
+				Temperature
+				Date_Tested as "Date Tested"
+				Describe_Present_Health_Condition as "Describe Present Health Condition"
+				Signature
+				Attach_current_photo as "Attach current photo"
+				Auto_Number as "Auto Number"
+				Attending_Physician as "Attending Physician"
+				Patient_Name.Valid_ID as "Valid ID"
+				Patient_Name.Telepono as "Phone"
+				Patient_Name.Patient_Control_No as "Patient Control No"
+				Patient_Name.Email
+				BP
+				Weight
+				Height
+			)
+			filters
+			(
+				"Priorities"  :  Temperature > 40
+			)
+			sort by
+			(
+				Temperature descending
+			)
+			options
+			(
+				icon = "business-laptop-71"
+	 		)
+			conditional formatting
+			(
+				"Temp"
+				{
+				condition = (Temperature <= 39)
+				fields = [Patient_Name, Temperature]
+				format = "color:#ffffff;background-color:#f3f3f3;"
+				}
+				"New Format"
+				{
+				fields = [Temperature]
+				format = "color:#ffffff;background-color:#ef1616;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Attending_Physician as "Attending Physician"
+							Patient_Name as "Patient Name"
+							Attach_current_photo as "Attach current photo"
+							Temperature
+							BP
+							Weight
+							Height
+							Describe_Present_Health_Condition as "Describe Present Health Condition"
+							Date_Tested as "Date Tested"
+							Patient_Name.Valid_ID as "Valid ID"
+							Patient_Name.Email as "Email"
+							Patient_Name.Telepono as "Phone"
+							Patient_Name.Patient_Control_No as "Patient Control No"
+							Signature
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 2
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Name as "Patient Name"
+							Temperature
+							Date_Tested as "Date Tested"
+							Describe_Present_Health_Condition as "Describe Present Health Condition"
+							Signature
+							Attach_current_photo as "Attach current photo"
+							Auto_Number as "Auto Number"
+						)
+					)
+					datablock2
+					(
+			 			layout type = -2
+		     			title = "Add Report"
+		     			related field =  Patient_Name[Temperature is not null && Date_Tested is today]
+						fields
+						(
+							Patient_Control_No as "Patient Control No"
+							Name
+							Gender
+							Date_of_Birth as "Date of Birth"
+							Telepono as "Phone"
+							Valid_ID as "Valid ID"
+							Address
+							Email
+						)
+					)
+					datablock3
+					(
+			 			layout type = -2
+		     			title = "Add Report"
+		     			related field =  Attending_Physician[Temperature is not null && Date_Tested is today]
+						fields
+						(
+							Full_Name as "Full Name"
+							Specialization
+							hospital_and_organization as "Hospital and Organization"
+							Address
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+		list Today_Reported_Cases_40_and_above_Temp
+		{
+			displayName = "Today  Reported Cases 40 and above Temp"
+			show all rows from Add_Report  [Temperature >= 40 && Date_Tested is today]  
+			(
+				Patient_Name as "Patient Name"
+				(
+					view = Patient_List
+				)
+				Temperature
+				Date_Tested as "Date Tested"
+				Describe_Present_Health_Condition as "Describe Present Health Condition"
+				Signature
+				Attach_current_photo as "Attach current photo"
+				Auto_Number as "Auto Number"
+				Attending_Physician as "Attending Physician"
+				(
+					view = All_Medical_Staff
+				)
+				Patient_Name.Valid_ID as "Valid ID"
+				Patient_Name.Telepono as "Phone"
+				Patient_Name.Patient_Control_No as "Patient Control No"
+				Patient_Name.Email
+				BP
+				Weight
+				Height
+			)
+			filters
+			(
+				"Priorities"  :  Temperature > 40
+			)
+			sort by
+			(
+				Temperature descending
+			)
+			conditional formatting
+			(
+				"Temp"
+				{
+				condition = (Temperature <= 39)
+				fields = [Patient_Name, Temperature]
+				format = "color:#ffffff;background-color:#f3f3f3;"
+				}
+				"New Format"
+				{
+				fields = [Temperature]
+				format = "color:#ffffff;background-color:#ef1616;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Attending_Physician as "Attending Physician"
+							Patient_Name as "Patient Name"
+							Attach_current_photo as "Attach current photo"
+							Temperature
+							BP
+							Weight
+							Height
+							Describe_Present_Health_Condition as "Describe Present Health Condition"
+							Date_Tested as "Date Tested"
+							Patient_Name.Valid_ID as "Valid ID"
+							Patient_Name.Email as "Email"
+							Patient_Name.Telepono as "Phone"
+							Patient_Name.Patient_Control_No as "Patient Control No"
+							Signature
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Name as "Patient Name"
+							Temperature
+							Date_Tested as "Date Tested"
+							Describe_Present_Health_Condition as "Describe Present Health Condition"
+							Signature
+							Attach_current_photo as "Attach current photo"
+							Auto_Number as "Auto Number"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+		list Today_Reported_by_Doctor
+		{
+			displayName = "Today  Reported Cases  by Doctor"
+			show all rows from Add_Report  [Attending_Physician.Full_Name is not null && Date_Tested is today]  
+			(
+				Patient_Name as "Patient Name"
+				(
+					view = Patient_List
+				)
+				Temperature
+				Date_Tested as "Date Tested"
+				Describe_Present_Health_Condition as "Describe Present Health Condition"
+				Signature
+				Attach_current_photo as "Attach current photo"
+				Auto_Number as "Auto Number"
+				Attending_Physician as "Attending Physician"
+				(
+					view = All_Medical_Staff
+				)
+				Patient_Name.Valid_ID as "Valid ID"
+				Patient_Name.Telepono as "Phone"
+				Patient_Name.Patient_Control_No as "Patient Control No"
+				Patient_Name.Email
+				BP
+				Weight
+				Height
+			)
+			filters
+			(
+				"Priorities"  :  Temperature > 40
+			)
+			sort by
+			(
+				Temperature descending
+			)
+			conditional formatting
+			(
+				"Temp"
+				{
+				condition = (Temperature <= 39)
+				fields = [Patient_Name, Temperature]
+				format = "color:#ffffff;background-color:#f3f3f3;"
+				}
+				"New Format"
+				{
+				fields = [Temperature]
+				format = "color:#ffffff;background-color:#ef1616;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Attending_Physician as "Attending Physician"
+							Patient_Name as "Patient Name"
+							Attach_current_photo as "Attach current photo"
+							Temperature
+							BP
+							Weight
+							Height
+							Describe_Present_Health_Condition as "Describe Present Health Condition"
+							Date_Tested as "Date Tested"
+							Patient_Name.Valid_ID as "Valid ID"
+							Patient_Name.Email as "Email"
+							Patient_Name.Telepono as "Phone"
+							Patient_Name.Patient_Control_No as "Patient Control No"
+							Signature
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Name as "Patient Name"
+							Temperature
+							Date_Tested as "Date Tested"
+							Describe_Present_Health_Condition as "Describe Present Health Condition"
+							Signature
+							Attach_current_photo as "Attach current photo"
+							Auto_Number as "Auto Number"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+	}
+	section Appointments
+	{
+		icon = "ui-1-calendar-grid-61"
+		form Onsite_Visit
+		{
+			displayname = "Onsite Visit"
+			success message = "Appointment Added Successfully"
+			field alignment = left
+			Section
+			(
+				type = section
+	 			row = 1
+	 			column = 0   
+				width = medium
+			)
+			Add_Patient_Name
+			(
+				type = picklist
+				displayname = "Add Patient Name"
+				values  = Add_Patient.ID
+    			displayformat = [" " + Name.prefix + " " + Name.first_name + " " + Name.last_name + " " + Name.suffix]
+				sortorder = ascending
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Select_Date_Time
+			(
+    			type = datetime
+				displayname = "Select Date-Time"
+				timedisplayoptions = "hh:mm:ss"
+				alloweddays = 0,1,2,3,4,5,6
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Medical_Staff
+			(
+				type = picklist
+				displayname = "Medical Staff"
+				values  = Medical_Staff.ID
+    			displayformat = [Full_Name + " >>" + Specialization]
+				allow new entries = true
+				[
+					displayname = "Add New"
+				]
+				sortorder = ascending
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+	
+			customize
+			(
+				icon = "location-appointment"
+			)
+			actions
+			{
+				on add
+				{
+					submit
+					(
+   						type = submit
+   						displayname = "Submit"
+					)
+					reset
+					(
+   						type = reset
+   						displayname = "Reset"
+					)
+				}
+				on edit
+				{
+					update
+					(
+   						type = submit
+   						displayname = "Update"
+					)
+					cancel
+					(
+   						type = cancel
+   						displayname = "Cancel"
+					)
+				}
+			}
+		}
+		list All_Appointments
+		{
+			displayName = "All Appointments"
+			show all rows from Onsite_Visit    
+			(
+				Add_Patient_Name as "Add Patient Name"
+				Select_Date_Time as "Select Date-Time"
+				Medical_Staff as "Medical Staff"
+				Medical_Staff.hospital_and_organization as "Hospital and Organization"
+				Medical_Staff.Address 
+	 			(
+	      			displayformat = [address_line_1+""+address_line_2+""+district_city+""+state_province+""+postal_Code+""+country]
+	      			enable = Link_to_Map,Show_As_Text
+	 			)
+			)
+			options
+			(
+				icon = "travel-world"
+	 		)
+			quickview
+			(
+				layout
+				(
+		 			type = -5
+					datablock1
+					(
+			 			layout type = -5
+		     			title = "Overview"
+						fields
+						(
+							Medical_Staff as "Medical Staff"
+							Add_Patient_Name as "Add Patient Name"
+							Select_Date_Time as "Select Date-Time"
+							Medical_Staff.hospital_and_organization as "Hospital and Organization"
+							Medical_Staff.Address as "Address"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Add_Patient_Name as "Add Patient Name"
+							Select_Date_Time as "Select Date-Time"
+							Medical_Staff as "Medical Staff"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+	}
+	section Onsite_Visits
+	{
+		displayname= "Onsite Visits"
+		icon = "health-hospital-32"
+		form Patient_Attendance
+		{
+			displayname = "Patient Attendance"
+			success message = "Clinic Attendance Added Successfully"
+			field alignment = left
+			Section
+			(
+				type = section
+	 			row = 1
+	 			column = 0   
+				width = medium
+			)
+			Queue_number
+			(
+				type = number
+				displayname = "Queue number"
+				maxchar = 12
+				initial value = 1
+	 			row = 1
+	 			column = 1   
+				width = small
+			)
+			Patient_Control_No
+			(
+    			type = autonumber
+				displayname = "Patient Control No"
+				start index = 1
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Add_Patient_Name
+			(
+				type = picklist
+				displayname = "Add Patient Name"
+				values  = Add_Patient.ID
+    			displayformat = [" " + Name.first_name + " " + Name.last_name]
+				allow new entries = true
+				[
+					displayname = "Add New"
+				]
+				sortorder = ascending
+	 			row = 1
+	 			column = 1   
+				width = small
+			)
+			Time_In
+			(
+    			type = time
+				displayname = "Time In"
+				initial value = "${zoho.currenttime}"	
+				timedisplayoptions = "hh:mm:ss" 
+	 			row = 1
+	 			column = 1   
+				width = small
+			)
+			Date_field1
+			(
+    			type = date
+				displayname = "Date"
+				initial value = "${zoho.currentdate}"
+				alloweddays = 1,2,3,4,5,6
+				private = true
+	 			row = 1
+	 			column = 1   
+				width = small
+			)
+			Section1
+			(
+				type = section
+				displayname = "Section"
+	 			row = 2
+	 			column = 0   
+				width = medium
+			)
+			Temperature
+			(
+				type = number
+	 			row = 2
+	 			column = 1   
+				width = small
+			)
+			BP
+			(
+    			type = text
+	 			row = 2
+	 			column = 1   
+				width = small
+			)
+			Height
+			(
+    			type = text
+	 			row = 2
+	 			column = 1   
+				width = small
+			)
+			Weight
+			(
+    			type = text
+	 			row = 2
+	 			column = 1   
+				width = small
+			)
+			Scan_Prescription
+			(
+    			type = image
+				displayname = "Lab Result/Photo"
+				source  = file,camera
+				enable = title
+				timer allowed = true
+				camera = primary
+				preview duration = 0
+				show gallery = true
+				switch camera = true
+				submit onscan = true
+    			description
+    			[
+    				type = tooltip
+    			 	message = "Purpose is:\n1) Scan/Pic Lab Result\n2) Take photo of the patient\n3) Other Medical Record"
+    			]
+	 			row = 2
+	 			column = 1   
+				width = small
+			)
+			Diagnosed
+			(
+				type = section
+				displayname = "Remarks"
+				visibility = true
+	 			row = 3
+	 			column = 0   
+				width = medium
+			)
+			Findings
+			(
+    			type = richtext
+				height = 200px
+				toolbar = enable
+				[
+					style, strike-through, indent, font-color, background-color, remove-formatting, alignment, link, table, ruler, bullets-and-numbering, 
+					font-size : {1, 2, 3, 4, 5, 6, 7},
+					font-family : {"Serif", "Arial", "Courier New", "Georgia", "Tahoma", "Times New Roman", "Trebuchet", "Verdana", "Comic Sans Ms", "Garamond", "Narrow", "Wide", "Calibri"}
+				]
+				private = true
+	 			row = 3
+	 			column = 1   
+				width = medium
+			)
+			Scan_Prescription1
+			(
+    			type = image
+				displayname = "Prescription"
+				source  = public_url,file,camera
+				enable = title
+				timer allowed = true
+				camera = primary
+				preview duration = 0
+				show gallery = true
+				switch camera = true
+				submit onscan = true
+    			description
+    			[
+    				type = help_text
+    			 	message = "PURPOSE:\n\n1) Scanned/Pic Lab Result\n2) Take Patient Photo\n3) Other Medical Records"
+    			]
+	 			row = 3
+	 			column = 1   
+				width = small
+			)
+			Mediacal_Staff
+			(
+				type = section
+				displayname = "Medical Staff"
+				visibility = true
+	 			row = 4
+	 			column = 0   
+				width = medium
+			)
+			must have Attending_Physician
+			(
+				type = picklist
+				displayname = "Attending Physician"
+				values  = Medical_Staff.ID
+    			displayformat = [Full_Name + " >>" + Specialization]
+				allow new entries = true
+				[
+					displayname = "Add New"
+				]
+				sortorder = ascending
+	 			row = 4
+	 			column = 1   
+				width = medium
+			)
+	
+			customize
+			(
+				icon = "health-hospital-32"
+			)
+			actions
+			{
+				on add
+				{
+					submit
+					(
+   						type = submit
+   						displayname = "Submit"
+					)
+					reset
+					(
+   						type = reset
+   						displayname = "Reset"
+					)
+				}
+				on edit
+				{
+					update
+					(
+   						type = submit
+   						displayname = "Update"
+					)
+					cancel
+					(
+   						type = cancel
+   						displayname = "Cancel"
+					)
+				}
+			}
+		}
+		list All_Clinic_Attendances_History
+		{
+			displayName = "All Clinic Attendance History"
+			show all rows from Patient_Attendance  [Time_In is not null]  
+			(
+				Patient_Control_No as "Patient Control No"
+				Time_In as "Time In"
+				Date_field1 as "Date"
+				Add_Patient_Name as "Add Patient Name"
+				Scan_Prescription as "Lab Result/Photo"
+				Findings
+				Add_Patient_Name.Name 
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Add_Patient_Name.Date_of_Birth as "Date of Birth"
+				Add_Patient_Name.Gender
+				Add_Patient_Name.Valid_ID as "Valid ID"
+				Add_Patient_Name.Patient_Control_No as "Patient Control No"
+				(
+					width = 73px
+				)
+				Add_Patient_Name.Telepono as "Phone"
+				Add_Patient_Name.Email
+				Add_Patient_Name.Address 
+	 			(
+	      			displayformat = [address_line_1+""+address_line_2+""+district_city+""+state_province+""+postal_Code+""+country]
+	      			enable = Show_As_Text
+	 			)
+				Add_Patient_Name.Added_Location  as "Added Location"
+	 			(
+	      			displayformat = [district_city1+""+state_province1+""+postal_Code1+""+country1]
+	      			enable = Link_to_Map,Show_As_Text
+	 			)
+				Scan_Prescription1 as "Prescription"
+				Attending_Physician as "Attending Physician"
+				BP
+				Height
+				Weight
+				Temperature
+				Queue_number as "Queue number"
+			)
+			options
+			(
+				icon = "users-2-home"
+	 		)
+			conditional formatting
+			(
+				"Time Format"
+				{
+				fields = [Time_In]
+				format = "font-weight:bold;color:#ef1616;background-color:#f1c40f;"
+				}
+				"Temp"
+				{
+				condition = (Temperature >= 40 && Date_field1 is today)
+				fields = [Temperature]
+				format = "color:#ffffff;background-color:#ef1616;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Add_Patient_Name.Patient_Control_No as "Patient Control No"
+							Attending_Physician as "Attending Physician"
+							Add_Patient_Name.Name as "Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Date_field1 as "Date"
+							Time_In as "Time In"
+							Temperature
+							BP
+							Weight
+							Height
+							Scan_Prescription as "Lab Result/Photo"
+							Findings
+							Scan_Prescription1 as "Prescription"
+							Add_Patient_Name.Date_of_Birth as "Date of Birth"
+							Add_Patient_Name.Gender as "Gender"
+							Add_Patient_Name.Telepono as "Phone"
+							Add_Patient_Name.Email as "Email"
+							Add_Patient_Name.Address as "Address"
+							Add_Patient_Name.Added_Location as "Added Location"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name as "Add Patient Name"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+							Temperature
+							BP
+							Weight
+							Height
+							Scan_Prescription as "Lab Result/Photo"
+							Findings
+							Scan_Prescription1 as "Prescription"
+							Attending_Physician as "Attending Physician"
+							Queue_number as "Queue number"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+		list Patients_Queuing_Manila_Doctors1
+		{
+			displayName = "Patients Queuing-Manila Doctors"
+			show all rows from Patient_Attendance  [Date_field1 is today && Attending_Physician.hospital_and_organization == "Manila doctors"]  
+			(
+				Patient_Control_No as "Patient Control No"
+				(
+					width = 51px
+				)
+				Time_In as "Time In"
+				(
+					width = 133px
+				)
+				Date_field1 as "Date"
+				Add_Patient_Name as "Add Patient Name"
+				Add_Patient_Name.Valid_ID as "Valid ID"
+				(
+					width = 218px
+				)
+				Add_Patient_Name.Name 
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Attending_Physician.Full_Name as "Doctor's Full Name"
+				Attending_Physician.Specialization
+				Attending_Physician.hospital_and_organization as "Hospital and Organization"
+			)
+			conditional formatting
+			(
+				"Queing Format"
+				{
+				fields = [Patient_Control_No]
+				format = "font-weight:bold;color:#ffffff;background-color:#e84c3d;"
+				}
+				"Queing Time"
+				{
+				fields = [Time_In]
+				format = "font-weight:bold;color:#ef1616;background-color:#1bbc9b;"
+				}
+				"Female Doctor Format"
+				{
+				condition = (Add_Patient_Name.Gender == "Female")
+				fields = [Attending_Physician.Full_Name]
+				format = "font-weight:bold;color:#ffffff;background-color:#f1c40f;"
+				}
+				"Male Doctors"
+				{
+				condition = (Add_Patient_Name.Gender == "Male")
+				fields = [Attending_Physician.Full_Name]
+				format = "color:#ffffff;background-color:#107c91;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Attending_Physician.Full_Name as "Doctor's Full Name"
+							Attending_Physician.hospital_and_organization as "Hospital and Organization"
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name.Name as "Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+							Attending_Physician.Specialization as "Specialization"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name as "Add Patient Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+		list Patients_Queuing_Asian_Hospital
+		{
+			displayName = "Patients Queuing-Asian Hospital"
+			show all rows from Patient_Attendance  [Date_field1 is today && Attending_Physician.hospital_and_organization == "Asian Hospital"]  
+			(
+				Patient_Control_No as "Patient Control No"
+				(
+					width = 51px
+				)
+				Time_In as "Time In"
+				(
+					width = 133px
+				)
+				Date_field1 as "Date"
+				Add_Patient_Name as "Add Patient Name"
+				Add_Patient_Name.Valid_ID as "Valid ID"
+				(
+					width = 218px
+				)
+				Add_Patient_Name.Name 
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Attending_Physician.Full_Name as "Doctor's Full Name"
+				Attending_Physician.Specialization
+				Attending_Physician.hospital_and_organization as "Hospital and Organization"
+			)
+			conditional formatting
+			(
+				"Queing Format"
+				{
+				fields = [Patient_Control_No]
+				format = "font-weight:bold;color:#ffffff;background-color:#e84c3d;"
+				}
+				"Queing Time"
+				{
+				fields = [Time_In]
+				format = "font-weight:bold;color:#ef1616;background-color:#1bbc9b;"
+				}
+				"Female Doctor Format"
+				{
+				condition = (Add_Patient_Name.Gender == "Female")
+				fields = [Attending_Physician.Full_Name]
+				format = "font-weight:bold;color:#ffffff;background-color:#f1c40f;"
+				}
+				"Male Doctors"
+				{
+				condition = (Add_Patient_Name.Gender == "Male")
+				fields = [Attending_Physician.Full_Name]
+				format = "color:#ffffff;background-color:#107c91;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Attending_Physician.Full_Name as "Doctor's Full Name"
+							Attending_Physician.hospital_and_organization as "Hospital and Organization"
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name.Name as "Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+							Attending_Physician.Specialization as "Specialization"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name as "Add Patient Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+		list Patients_Queuing_Manila_Doctors
+		{
+			displayName = "Patients Queuing-Eco Medical Center"
+			show all rows from Patient_Attendance  [Attending_Physician.Full_Name == "Dra. Pia Eco" && Date_field1 is today]  
+			(
+				Patient_Control_No as "Patient Control No"
+				(
+					width = 51px
+				)
+				Time_In as "Time In"
+				(
+					width = 133px
+				)
+				Date_field1 as "Date"
+				Add_Patient_Name as "Add Patient Name"
+				Add_Patient_Name.Valid_ID as "Valid ID"
+				(
+					width = 218px
+				)
+				Add_Patient_Name.Name 
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Attending_Physician.Full_Name as "Doctor's Full Name"
+				Attending_Physician.Specialization
+				Attending_Physician.hospital_and_organization as "Hospital and Organization"
+			)
+			conditional formatting
+			(
+				"Queing Format"
+				{
+				fields = [Patient_Control_No]
+				format = "font-weight:bold;color:#ffffff;background-color:#e84c3d;"
+				}
+				"Queing Time"
+				{
+				fields = [Time_In]
+				format = "font-weight:bold;color:#ef1616;background-color:#1bbc9b;"
+				}
+				"Female Doctor Format"
+				{
+				condition = (Add_Patient_Name.Gender == "Female")
+				fields = [Attending_Physician.Full_Name]
+				format = "font-weight:bold;color:#ffffff;background-color:#f1c40f;"
+				}
+				"Male Doctors"
+				{
+				condition = (Add_Patient_Name.Gender == "Male")
+				fields = [Attending_Physician.Full_Name]
+				format = "color:#ffffff;background-color:#107c91;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Attending_Physician.Full_Name as "Doctor's Full Name"
+							Attending_Physician.hospital_and_organization as "Hospital and Organization"
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name.Name as "Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+							Attending_Physician.Specialization as "Specialization"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name as "Add Patient Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+		list Patients_Queuing_St_Luke
+		{
+			displayName = "Patients Queuing-St Luke"
+			show all rows from Patient_Attendance  [Date_field1 is today && Attending_Physician.hospital_and_organization == "St Luke"]  
+			(
+				Patient_Control_No as "Patient Control No"
+				(
+					width = 51px
+				)
+				Time_In as "Time In"
+				(
+					width = 133px
+				)
+				Date_field1 as "Date"
+				Add_Patient_Name as "Add Patient Name"
+				Add_Patient_Name.Valid_ID as "Valid ID"
+				(
+					width = 218px
+				)
+				Add_Patient_Name.Name 
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Attending_Physician.Full_Name as "Doctor's Full Name"
+				Attending_Physician.Specialization
+				Attending_Physician.hospital_and_organization as "Hospital and Organization"
+			)
+			conditional formatting
+			(
+				"Queing Format"
+				{
+				fields = [Patient_Control_No]
+				format = "font-weight:bold;color:#ffffff;background-color:#e84c3d;"
+				}
+				"Queing Time"
+				{
+				fields = [Time_In]
+				format = "font-weight:bold;color:#ef1616;background-color:#1bbc9b;"
+				}
+				"Female Doctor Format"
+				{
+				condition = (Add_Patient_Name.Gender == "Female")
+				fields = [Attending_Physician.Full_Name]
+				format = "font-weight:bold;color:#ffffff;background-color:#f1c40f;"
+				}
+				"Male Doctors"
+				{
+				condition = (Add_Patient_Name.Gender == "Male")
+				fields = [Attending_Physician.Full_Name]
+				format = "color:#ffffff;background-color:#107c91;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Attending_Physician.Full_Name as "Doctor's Full Name"
+							Attending_Physician.hospital_and_organization as "Hospital and Organization"
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name.Name as "Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+							Attending_Physician.Specialization as "Specialization"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name as "Add Patient Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+		list Patients_Queuing_Canada_Medical_Center
+		{
+			displayName = "Patients Queuing-Canada Medical Center"
+			show all rows from Patient_Attendance  [Date_field1 is today && Attending_Physician.hospital_and_organization == "Makati Medical Center"]  
+			(
+				Patient_Control_No as "Patient Control No"
+				(
+					width = 51px
+				)
+				Time_In as "Time In"
+				(
+					width = 133px
+				)
+				Date_field1 as "Date"
+				Add_Patient_Name as "Add Patient Name"
+				Add_Patient_Name.Valid_ID as "Valid ID"
+				(
+					width = 218px
+				)
+				Add_Patient_Name.Name 
+	 			(
+	      			displayformat = [first_name+""+prefix+""+last_name+""+suffix]
+	 			)
+				Attending_Physician.Full_Name as "Doctor's Full Name"
+				Attending_Physician.Specialization
+				Attending_Physician.hospital_and_organization as "Hospital and Organization"
+			)
+			conditional formatting
+			(
+				"Queing Format"
+				{
+				fields = [Patient_Control_No]
+				format = "font-weight:bold;color:#ffffff;background-color:#e84c3d;"
+				}
+				"Queing Time"
+				{
+				fields = [Time_In]
+				format = "font-weight:bold;color:#ef1616;background-color:#1bbc9b;"
+				}
+				"Female Doctor Format"
+				{
+				condition = (Add_Patient_Name.Gender == "Female")
+				fields = [Attending_Physician.Full_Name]
+				format = "font-weight:bold;color:#ffffff;background-color:#f1c40f;"
+				}
+				"Male Doctors"
+				{
+				condition = (Add_Patient_Name.Gender == "Male")
+				fields = [Attending_Physician.Full_Name]
+				format = "color:#ffffff;background-color:#107c91;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -1
+					datablock1
+					(
+			 			layout type = -1
+		     			title = "Overview"
+						fields
+						(
+							Attending_Physician.Full_Name as "Doctor's Full Name"
+							Attending_Physician.hospital_and_organization as "Hospital and Organization"
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name.Name as "Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+							Attending_Physician.Specialization as "Specialization"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 1
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Patient_Control_No as "Patient Control No"
+							Add_Patient_Name as "Add Patient Name"
+							Add_Patient_Name.Valid_ID as "Valid ID"
+							Time_In as "Time In"
+							Date_field1 as "Date"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+	}
+	section Medical_Staffs
+	{
+		displayname= "Medical Staffs"
+		icon = "health-notebook"
+		form Medical_Staff
+		{
+			displayname = "Medical Staff"
+			success message = "Medical Staff Added Successfully"
+			field alignment = left
+			Section
+			(
+				type = section
+	 			row = 1
+	 			column = 0   
+				width = medium
+			)
+			must have Full_Name
+			(
+				type = picklist
+				displayname = "Full Name"
+				values = {"Dr. Russel F.", "Dr. Job E.", "Dra. Pia E.", "Dr. Edison P.", "Dr. Natchi S."}
+				sortorder = ascending
+				others option = true
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Specialization
+			(
+				type = picklist
+				values = {"Eurology", "Obstetrician ", "Pediatrician"}
+				sortorder = ascending
+				others option = true
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			must have hospital_and_organization
+			(
+				type = picklist
+				displayname = "Hospital and Organization"
+				values = {"Manila doctors", "Asian Hospital", "St Luke", "Makati Medical Center"}
+				sortorder = ascending
+				others option = true
+    			description
+    			[
+    				type = help_text
+    			 	message = "Select accreditted Doctors and Hospitals"
+    			]
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+			Address
+			(
+    			type = address
+     			capture_coordinates = true
+     			adjust_using_map = true
+     			address_line_1
+     			(
+	     			  type = address_line_1
+	     			  displayname = "Address Line 1"
+     			) 
+     			address_line_2
+     			(
+	     			  type = address_line_2
+	     			  displayname = "Address Line 2"
+	     			 visibility = false
+     			) 
+     			district_city
+     			(
+	     			  type = district_city
+	     			  displayname = "City / District"
+     			) 
+     			state_province
+     			(
+	     			  type = state_province
+	     			  displayname = "State / Province"
+     			) 
+     			postal_Code
+     			(
+	     			  type = postal_Code
+	     			  displayname = "Postal Code"
+     			) 
+     			country
+     			(
+	     			  type = country
+	     			  displayname = "Country"
+     			) 
+     			latitude
+     			(
+	     			  type = latitude
+	     			  displayname = "latitude"
+	     			 visibility = false
+     			) 
+     			longitude
+     			(
+	     			  type = longitude
+	     			  displayname = "longitude"
+	     			 visibility = false
+     			) 
+	 			row = 1
+	 			column = 1   
+				width = medium
+			)
+	
+			customize
+			(
+				icon = "holidays-sickle"
+			)
+			actions
+			{
+				on add
+				{
+					submit
+					(
+   						type = submit
+   						displayname = "Submit"
+					)
+					reset
+					(
+   						type = reset
+   						displayname = "Reset"
+					)
+				}
+				on edit
+				{
+					update
+					(
+   						type = submit
+   						displayname = "Update"
+					)
+					cancel
+					(
+   						type = cancel
+   						displayname = "Cancel"
+					)
+				}
+			}
+		}
+		summary All_Medical_Staff
+		{
+			displayName = "All Medical Staff and Locations"
+			show all rows from Medical_Staff  [hospital_and_organization is not null && Address.country is not null && Specialization is not null && Full_Name is not null && Address.address_line_1 is not null]  
+			(
+				Full_Name as "Full Name"
+				Specialization
+				hospital_and_organization as "Hospital and Organization"
+				Address 
+	 			(
+	      			displayformat = [address_line_1+""+address_line_2+""+district_city+""+state_province+""+postal_Code+""+country]
+	      			enable = Link_to_Map,Show_As_Text
+	 			)
+			)
+			filters
+			(
+				hospital_and_organization
+				Full_Name
+			)
+			group by
+			(
+				Full_Name ascending
+				hospital_and_organization ascending
+				Specialization ascending
+				Address ascending
+			)
+			sort by
+			(
+				hospital_and_organization ascending
+				Full_Name ascending
+				Specialization ascending
+				Address.address_line_1 ascending
+			)
+			options
+			(
+				display rows = 10
+				display records per row = 2
+				icon = "travel-world"
+			)
+			conditional formatting
+			(
+				"Hospital Map"
+				{
+				condition = (Address.country == "Philippines" && hospital_and_organization is not null)
+				fields = [Address.address_line_1]
+				format = "color:#333;background-color:#f1c40f;"
+				}
+				"Hospitals"
+				{
+				fields = [hospital_and_organization]
+				format = "color:#000000;background-color:#1bbc9b;"
+				}
+				"Specialization"
+				{
+				fields = [Specialization]
+				format = "color:#ffffff;background-color:#e84c3d;"
+				}
+				"Doctors"
+				{
+				fields = [Full_Name, Address.address_line_1]
+				format = "color:#333;background-color:#f1c40f;"
+				}
+			)
+			quickview
+			(
+				layout
+				(
+		 			type = -2
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Full_Name as "Full Name"
+							Specialization
+							hospital_and_organization as "Hospital and Organization"
+							Address
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+							record
+							(
+								Edit   	   
+								Duplicate   	   
+								Delete   	   
+    						)
+    			)
+    			action
+    			(
+							on click
+							(
+								View Record   	   
+    						)
+							on right click
+							(
+								Edit   	   
+								Delete   	   
+								Duplicate   	   
+								View Record   	   
+    						)
+     			)
+			)
+			detailview
+			(
+				layout
+				(
+		 			type = 2
+					datablock1
+					(
+			 			layout type = -2
+		     			title = "Overview"
+						fields
+						(
+							Full_Name as "Full Name"
+							Specialization
+							hospital_and_organization as "Hospital and Organization"
+						)
+					)
+				)
+
+				menu
+    			(
+    	 			header
+    	 			(
+    		 			Edit 
+    		 			Duplicate 
+    		 			Delete 
+    	 			)
+    			)
+			)
+		}
+	}
+
+
+
+	workflow
+	{
+		form
+		{
+			Fetch_Patient_Records as "Fetch Patient Records"
+			{
+				type =  form
+				form = Add_Patient
+				record event = on add or edit
+
+	on load
+	{
+	}
+
+			}
+			Fetch_Doctors_Information as "Fetch Doctors Information"
+			{
+				type =  form
+				form = Medical_Staff
+				record event = on add or edit
+
+	on success
+	{
+	}
+
+			}
+			Fetch_records as "Fetch records"
+			{
+				type =  form
+				form = Add_Report
+				record event = on add or edit
+
+	on user input of Patient_Name
+	{
+					actions 
+					{
+						custom deluge script
+						(
+											input.Patient_Control_No = input.Patient_Name.Patient_Control_No;
+										input.Email = input.Patient_Name.Email;
+										input.Phone_Number = input.Patient_Name.Telepono;
+										input.Attending_Physician = input.Attending_Physician.Full_Name;
+						)
+					}
+	}
+
+			}
+			Send_Email_Form_Propertie as "Send Email - Form Properties"
+			{
+				type =  presuccess
+				form = Add_Patient
+				on start
+				{
+					actions 
+					{
+						sendmail
+						(
+							from : "zoho.adminuserid"
+							to : "zoho.adminuserid"
+							subject : "Lagnat mo Post mo : New entry added"
+							message : "Hello ${first_name}<br><br>A new entry added in 'Ilagay_Pangalan_ng_Pasyente' form of Lagnat mo Post mo application.<div><br></div><br><br>"
+						)
+					}
+				}
+			}
+			Send_Email_Form_Propertie1 as "Send Email - Form Properties"
+			{
+				type =  presuccess
+				form = Add_Report
+				on start
+				{
+					actions 
+					{
+						sendmail
+						(
+							from : "zoho.adminuserid"
+							to : "zoho.adminuserid"
+							subject : "Lagnat mo Post mo : New entry added"
+							message : "Hello,<br/><br/>A new entry added in 'Mag-ulat ng Lagnat' form of 'Lagnat mo Post mo' application.<br/><br><br><br><br>"
+							attachments : template : _default as inline
+						)
+					}
+				}
+			}
+			Send_Email_Form_Propertie2 as "Send Email - Form Properties"
+			{
+				type =  presuccess
+				form = Patient_Attendance
+				on start
+				{
+					actions 
+					{
+						sendmail
+						(
+							from : "zoho.adminuserid"
+							to : "zoho.loginuserid"
+							subject : "Doctor's Online : New entry added"
+							message : "Hello,<br><br>A new entry added in 'Clinic_Attendance' form of Doctor's Online application.<br><br><br><br><br>"
+							attachments : template : _default as inline
+						)
+					}
+				}
+			}
+			Notify_Patient as "Notify Patient"
+			{
+				type =  form
+				form = Add_Report
+				record event = on add or edit
+
+	on success
+	{
+					actions  (Temperature > 39)
+					{
+						sendmail
+						(
+							from : "zoho.adminuserid"
+							to : "zoho.loginuserid"
+							subject : "Record Added or Updated${Patient_Name}"
+							message : "<div>Hello&nbsp;${Patient_Name},<br></div><div><br></div><div>Hope you are fine. Based on your record submitted, your fever is ${Date_Tested} and need immediate action. Please stay at home, we will send our staff to fect you up.<br><br><br>Thank you<br></div><div>Medical Staff<br><br></div>"
+						)
+					}
+	}
+
+			}
+			Queving1 as "Queving"
+			{
+				type =  form
+				form = Patient_Attendance
+				record event = on add or edit
+
+	on success
+	{
+	}
+
+			}
+		}
+	}
+	share_settings
+	{
+			"Read"
+			{
+				name = "Read"
+				type = Users_Permissions
+				permissions = {Chat:true, Predefined:true}
+				description = "This profile will have read permission for all components\n"
+			}
+			"Write"
+			{
+				name = "Write"
+				type = Users_Permissions
+				permissions = {Chat:true, Predefined:true}
+				description = "This profile will have write permission for all components\n"
+			}
+			"Patient Access"
+			{
+				name = "Patient Access"
+				type = Users_Permissions
+				permissions = {Chat:false, Predefined:false}
+				description = "Patient access level\n"
+				ModulePermissions
+				{
+					Medical_Staff
+					{
+						enabled= read_comm,write_comm 
+						ReportPermissions
+						{
+							All_Medical_Staff={"View"}
+						}
+						FieldPermissions
+						{
+							Full_Name{visibility:true,readonly:false}
+							Specialization{visibility:true,readonly:false}
+							Address{visibility:true,readonly:false}
+							Section{visibility:true,readonly:false}
+							hospital_and_organization{visibility:true,readonly:false}
+						}
+					}
+					Patient_Attendance
+					{
+						FieldPermissions
+						{
+							Temperature{visibility:true,readonly:true}
+							Findings{visibility:true,readonly:true}
+							Date_field1{visibility:true,readonly:true}
+							Diagnosed{visibility:false,readonly:false}
+							Section{visibility:false,readonly:false}
+							Queue_number{visibility:true,readonly:false}
+							BP{visibility:true,readonly:true}
+							Weight{visibility:true,readonly:true}
+							Scan_Prescription1{visibility:true,readonly:true}
+							Time_In{visibility:true,readonly:true}
+							Mediacal_Staff{visibility:false,readonly:false}
+							Attending_Physician{visibility:true,readonly:true}
+							Section1{visibility:false,readonly:false}
+							Patient_Control_No{visibility:true,readonly:false}
+							Add_Patient_Name{visibility:true,readonly:false}
+							Height{visibility:true,readonly:true}
+							Scan_Prescription{visibility:true,readonly:false}
+						}
+					}
+					Add_Report
+					{
+						enabled= Create,Tab 
+						FieldPermissions
+						{
+							Temperature{visibility:true,readonly:false}
+							Attach_current_photo{visibility:true,readonly:false}
+							Email{visibility:true,readonly:false}
+							Phone_Number{visibility:true,readonly:false}
+							Describe_Present_Health_Condition{visibility:true,readonly:false}
+							Section{visibility:true,readonly:false}
+							Auto_Number{visibility:true,readonly:false}
+							BP{visibility:true,readonly:false}
+							Weight{visibility:true,readonly:false}
+							Medical_Staff{visibility:true,readonly:false}
+							Attending_Physician{visibility:true,readonly:false}
+							Signature{visibility:true,readonly:false}
+							Patient_Control_No{visibility:true,readonly:false}
+							Date_Tested{visibility:true,readonly:false}
+							Height{visibility:true,readonly:false}
+							Patient_Name{visibility:true,readonly:false}
+						}
+					}
+					Add_Patient
+					{
+						enabled= Create,Tab 
+						FieldPermissions
+						{
+							Date_of_Birth{visibility:true,readonly:false}
+							Email{visibility:true,readonly:false}
+							Address{visibility:true,readonly:false}
+							Patient_Control_No{visibility:true,readonly:true}
+							Gender{visibility:true,readonly:false}
+							Section{visibility:false,readonly:false}
+							Telepono{visibility:true,readonly:false}
+							Valid_ID{visibility:true,readonly:false}
+							Name{visibility:true,readonly:false}
+						}
+					}
+					Onsite_Visit
+					{
+						enabled= Create,Tab 
+						FieldPermissions
+						{
+							Medical_Staff{visibility:true,readonly:false}
+							Modified_User{visibility:false}
+							Modified_Time{visibility:false}
+							Add_Patient_Name{visibility:true,readonly:false}
+							Added_User{visibility:false}
+							Select_Date_Time{visibility:true,readonly:false}
+							Section{visibility:false,readonly:false}
+							Added_Time{visibility:false}
+						}
+					}
+				}
+			}
+			"Administrator"
+			{
+				name = "Administrator"
+				type = Users_Permissions
+				permissions = {Chat:true, Predefined:true}
+				description = "This profile will have all the permissions.\n"
+			}
+			"Customer"
+			{
+				name = "Customer"
+				type = Customer_Portal
+				permissions = {Chat:false, Predefined:true}
+				description = "This is the default profile having only add and view permission.\n"
+			}
+			"Doctor Access"
+			{
+				name = "Doctor Access"
+				type = Users_Permissions
+				permissions = {Chat:false, Predefined:false}
+				description = "Doctor Access Profile\n"
+				ModulePermissions
+				{
+					Medical_Staff
+					{
+						enabled= Create,Tab,read_comm,write_comm 
+						ReportPermissions
+						{
+							All_Medical_Staff={"View"}
+						}
+						FieldPermissions
+						{
+							Full_Name{visibility:true,readonly:false}
+							Specialization{visibility:true,readonly:false}
+							Address{visibility:true,readonly:false}
+							Section{visibility:true,readonly:false}
+							hospital_and_organization{visibility:true,readonly:false}
+						}
+					}
+					Patient_Attendance
+					{
+						enabled= Create,Viewall,Tab,read_comm,write_comm 
+						ReportPermissions
+						{
+							Patients_Queuing_St_Luke={"View"}
+							All_Clinic_Attendances_History={"View","Edit"}
+							Patients_Queuing_Manila_Doctors={"View"}
+							Patients_Queuing_Asian_Hospital={"View"}
+							Patients_Queuing_Manila_Doctors1={"View"}
+						}
+						FieldPermissions
+						{
+							Temperature{visibility:true,readonly:false}
+							Findings{visibility:true,readonly:false}
+							Date_field1{visibility:true,readonly:false}
+							Diagnosed{visibility:true,readonly:false}
+							Section{visibility:true,readonly:false}
+							Queue_number{visibility:true,readonly:false}
+							BP{visibility:true,readonly:false}
+							Weight{visibility:true,readonly:false}
+							Scan_Prescription1{visibility:true,readonly:false}
+							Time_In{visibility:true,readonly:false}
+							Mediacal_Staff{visibility:true,readonly:false}
+							Attending_Physician{visibility:true,readonly:false}
+							Section1{visibility:true,readonly:false}
+							Patient_Control_No{visibility:true,readonly:false}
+							Add_Patient_Name{visibility:true,readonly:false}
+							Height{visibility:true,readonly:false}
+							Scan_Prescription{visibility:true,readonly:false}
+						}
+					}
+					Add_Report
+					{
+						enabled= Export,read_comm,write_comm 
+						ReportPermissions
+						{
+							Details_of_Reported_Cases={"View"}
+						}
+						FieldPermissions
+						{
+							Temperature{visibility:true,readonly:false}
+							Attach_current_photo{visibility:true,readonly:false}
+							Email{visibility:true,readonly:false}
+							Phone_Number{visibility:true,readonly:false}
+							Describe_Present_Health_Condition{visibility:true,readonly:false}
+							Section{visibility:true,readonly:false}
+							Auto_Number{visibility:true,readonly:false}
+							BP{visibility:true,readonly:false}
+							Weight{visibility:true,readonly:false}
+							Medical_Staff{visibility:true,readonly:false}
+							Attending_Physician{visibility:true,readonly:false}
+							Signature{visibility:true,readonly:false}
+							Patient_Control_No{visibility:true,readonly:false}
+							Date_Tested{visibility:true,readonly:false}
+							Height{visibility:true,readonly:false}
+							Patient_Name{visibility:true,readonly:false}
+						}
+					}
+					Add_Patient
+					{
+						enabled= Create,Export,Tab,read_comm,write_comm 
+						ReportPermissions
+						{
+							Patient_List={"View"}
+						}
+						FieldPermissions
+						{
+							Date_of_Birth{visibility:true,readonly:false}
+							Email{visibility:true,readonly:false}
+							Address{visibility:true,readonly:false}
+							Patient_Control_No{visibility:true,readonly:false}
+							Gender{visibility:true,readonly:false}
+							Section{visibility:true,readonly:false}
+							Telepono{visibility:true,readonly:false}
+							Valid_ID{visibility:true,readonly:false}
+							Name{visibility:true,readonly:false}
+						}
+					}
+					Onsite_Visit
+					{
+						enabled= Create,Export,Tab,read_comm,write_comm 
+						ReportPermissions
+						{
+							All_Appointments={"View"}
+						}
+						FieldPermissions
+						{
+							Medical_Staff{visibility:true,readonly:false}
+							Add_Patient_Name{visibility:true,readonly:false}
+							Select_Date_Time{visibility:true,readonly:false}
+							Section{visibility:true,readonly:false}
+						}
+					}
+					DASHBOARDS1
+					{
+						enabled = tab
+					}
+				}
+			}
+			roles
+			{
+				"CEO"
+				{
+					description = "User belonging to this role can access data of all other users.\n\n\n\n"
+					"Doctors"
+					{
+						description = "Medical Staff Access level\n"
+						share data with peers = true
+					}
+				}
+			}
+	}
+
+	customize
+	{
+		
+		layout = "tab"
+		color = "black"
+		base theme = "professional"
+		new theme = 8
+		new theme color = 8
+		icons = true
+    	icon type = 3
+    	icon name = "DO"
+    	icon theme = "darkgrey"
+		icons style = outline
+	}
+
+	translation
+{
+"{\"Language_Settings\" : {\"LANGAGUE_WITH_LOGIN\":\"userchoice\"},}"
+}
+}
