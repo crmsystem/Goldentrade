@@ -13,6 +13,11 @@ Generated on 2026-07-25 from an Indeed job search for **Zoho CRM Developer** rol
 | 5 | [Software Backend Engineer - Full Stack Developer](https://to.indeed.com/aad687grntm6) | Anchored | Pasig | N/A | — |
 | 6 | [Sales Development Representative](https://to.indeed.com/aaw2997j9zxh) | Integrated Office Solutions | Muntinlupa | N/A | — |
 
+## Employer contact emails
+
+- **L3 Global Ventures** — careers@l3globalventures.com (listed in the job posting; added to the letter's recipient block)
+- **Hubexo** — no direct email was published in the posting or in Indeed's company data; the letter notes to apply via the [Indeed listing](https://to.indeed.com/aackyfv667f7) instead
+
 ## Why only 2 letters were written
 
 Letters were written for the roles that are direct or strong fits for a Zoho/HubSpot CRM Developer background and meet the stated preferences:
