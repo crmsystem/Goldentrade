@@ -9,7 +9,7 @@ Auth: standard Zoho CRM OAuth2 self-client (client credentials + a
 long-lived refresh token). Generate the refresh token once via the
 Zoho API Console (Self Client) with scope:
   ZohoCRM.modules.calls.CREATE,ZohoCRM.modules.leads.READ,
-  ZohoCRM.modules.contacts.READ,ZohoCRM.coql.READ
+  ZohoCRM.modules.contacts.READ
 """
 
 from __future__ import annotations
