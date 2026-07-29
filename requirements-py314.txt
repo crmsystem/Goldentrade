@@ -24,3 +24,6 @@ openai
 # Telephony
 twilio
 # livekit-agents (optional, only needed if TELEPHONY_PROVIDER=livekit)
+
+# Testing
+pytest

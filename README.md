@@ -79,3 +79,68 @@ infrastructure to Zoho Voice, the STT/LLM/TTS stages here are unaffected - only
 `TELEPHONY_PROVIDER=livekit` is reserved in `config.py` for a LiveKit Agents-based bridge, which
 would reuse `pipeline/orchestrator.py`'s `CallSession` exactly as `telephony/twilio_stream.py`
 does today - only the audio transport (LiveKit room <-> PCM16) differs. Not yet implemented.
+
+## Testing
+
+### Automated tests (no credentials, no network)
+
+```
+pip install -r requirements-py314.txt
+pytest tests/ -v
+```
+
+These cover the parts that don't require a live call, a model download, or a paid API key:
+
+- `tests/test_codecs.py` - mu-law/PCM16 encode-decode correctness (checked against the stdlib
+  `audioop` reference where available) and 8k<->16k resampling
+- `tests/test_orchestrator.py` - `CallSession`'s VAD segmentation -> STT -> LLM -> TTS ->
+  Zoho-logging control flow, using fake providers so no model weights or API keys are needed
+- `tests/test_zoho_client.py` - OAuth token refresh, phone-based Contact/Lead lookup, and Call
+  record construction, using monkeypatched HTTP responses instead of the real Zoho API
+
+`tests/conftest.py` stubs `torch`/`soundfile` only if they aren't already installed, so these
+tests stay fast on a lightweight box; anywhere the real packages are present (e.g. a full
+`requirements-py314.txt` install), they're used as-is.
+
+### Testing a single provider with real credentials
+
+Each provider class can be exercised directly, in isolation, once its `.env` values are set:
+
+```python
+# STT
+from stt.whisper_stt import WhisperSTT
+WhisperSTT().transcribe_pcm16(open("sample_16k_mono.raw", "rb").read())
+
+# LLM
+from llm.anthropic_llm import ClaudeLLM
+from llm.base import ConversationState
+ClaudeLLM().reply(ConversationState(), "What are your hours?")
+
+# TTS
+from tts.elevenlabs_tts import ElevenLabsTTS
+audio = ElevenLabsTTS().synthesize_pcm16("Hello, thanks for calling.")
+open("out.pcm", "wb").write(audio)
+
+# Zoho CRM
+from crm.zoho_client import ZohoCRMClient
+ZohoCRMClient().find_by_phone("+1 555 123 4567")
+```
+
+### End-to-end live call test
+
+The full pipeline can only be verified against a real phone call, since Twilio Media Streams,
+STT/TTS latency, and audio quality don't show up in unit tests:
+
+1. Fill in real credentials in `.env` for whichever STT/LLM/TTS providers you picked.
+2. `uvicorn telephony.twilio_stream:app --host 0.0.0.0 --port 8080`
+3. In another terminal: `ngrok http 8080`, then set that number's Twilio "A call comes in"
+   webhook to `https://<ngrok-id>.ngrok.io/voice` (HTTP POST).
+4. Call the Twilio number from a real phone and talk to it. Watch the bridge's logs for
+   `Call started for <phone>` and `Logged call to Zoho CRM: <id>` on hang-up.
+5. In Zoho CRM, open the matched Contact/Lead (or search the `Calls` module directly) and
+   confirm a new Call record appeared with the transcript and summary in its Description.
+
+Things worth listening/checking for on that first live call: turn-taking latency (how long
+after you stop talking before the agent replies), whether Silero VAD is cutting you off mid
+-sentence or waiting too long after you finish, and whether the mu-law round trip through
+`audio/codecs.py` introduces any audible artifacts compared to the TTS provider's raw output.
