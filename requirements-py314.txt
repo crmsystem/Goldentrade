@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+aiohttp
+httpx
+python-dotenv
+numpy
+soundfile
+torch
+requests
+
+# Optional
+# deepgram-sdk (if you prefer the official client)
