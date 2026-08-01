@@ -1,5 +1,5 @@
 fastapi
-uvicorn
+uvicorn[standard]
 aiohttp
 httpx
 python-dotenv
@@ -8,5 +8,22 @@ soundfile
 torch
 requests
 
-# Optional
-# deepgram-sdk (if you prefer the official client)
+# STT
+faster-whisper
+# deepgram-sdk (optional, if you prefer the official client over the raw REST call in stt/deepgram_stt.py)
+
+# LLM
+anthropic
+openai
+
+# TTS
+# elevenlabs (optional, if you prefer the official client over the raw REST call in tts/elevenlabs_tts.py)
+# Piper TTS runs as an external binary (https://github.com/rhasspy/piper) - install separately,
+# point PIPER_BINARY/PIPER_MODEL_PATH at it in .env
+
+# Telephony
+twilio
+# livekit-agents (optional, only needed if TELEPHONY_PROVIDER=livekit)
+
+# Testing
+pytest
